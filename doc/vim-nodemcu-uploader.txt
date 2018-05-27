@@ -1,8 +1,8 @@
-*vim-nodemcu-uploader.txt* Vim interface for nodemcu-uploader command.
+*vim-nodemcu-uploader.txt*	For Vim version 8.0	Last change: 2018 May 27
 
 Some commands for making nodemcu development more pratical.
 
-======
+=======================================================================================
 
 1. Overview ............................................... |Overview|
 2. Upload current file .................................... |NCMUcp|
@@ -13,7 +13,7 @@ Some commands for making nodemcu development more pratical.
 7. Accessing NodeMCU interactive terminal ................. |NMCUsh|
 8. Upload, then go to terminal ............................ |NMCUtest|
 
-======
+=======================================================================================
 
 *Overview*
 
@@ -25,47 +25,47 @@ https://github.com/kmpm/nodemcu-uploader#installation.
 After installing make sure "nodemcu-uploader --help" command works before
 starting vim.
 
-=======
+=======================================================================================
 
 *NMCUcp*
 
 This will upload the current opened file to NodeMCU. The NodeMCU is
 restarted after uploading.
 
-======
+=======================================================================================
 
 *NMCUexec*
 
 This command executes the current opened file on NodeMCU. It uses
 the "nodemcu-uploader exec" command.
 
-======
+=======================================================================================
 
 *NMCUls*
 
 This will list the files inside flash. If you want to delete a file, use the
 |NMCUrm| command.
 
-======
+=======================================================================================
 
 *NMCUrestart*
 
 This restarts the NodeMCU, is like "nodemcu-uploader restart"
 
-======
+=======================================================================================
 
 *NMCUrm* 
 
 This will prompt for files to delete. Once anwered the file is removed from the
 flash.
 
-======
+=======================================================================================
 *NMCUsh*
 
 Use this to access the NodeMCU from terminal. It uses "nodemcu terminal"
 command.
 
-======
+=======================================================================================
 
 *NMCUtest*
 
@@ -73,3 +73,6 @@ This command does tree things in sequence. It uploads the current file
 to NodeMCU, restart it and enter in the serial. This should help to achieve
 some kind of quickfix. Testing code on NMCU is boring so this would
 speed up things a little.
+
+=======================================================================================
+vim:set ts=4 sts=4 sw=4 ft=help:
