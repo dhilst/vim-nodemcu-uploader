@@ -1,0 +1,75 @@
+*vim-nodemcu-uploader.txt* Vim interface for nodemcu-uploader command.
+
+Some commands for making nodemcu development more pratical.
+
+======
+
+1. Overview ............................................... |Overview|
+2. Upload current file .................................... |NCMUcp|
+3. Executing current file ................................. |NMCUexec|
+4. Listing files .......................................... |NMCUls|
+5. Restarting NodeMCU ..................................... |NCMUrestart|
+6. Erasing file from flash ................................ |NMCUrm|
+7. Accessing NodeMCU interactive terminal ................. |NMCUsh|
+8. Upload, then go to terminal ............................ |NMCUtest|
+
+======
+
+*Overview*
+
+This is a tiny wrap over https://github.com/kmpm/nodemcu-uploader. It makes use
+of the nodemcu-uploader command so it needs to be in path before vim is
+started. Follow installation instructions on
+https://github.com/kmpm/nodemcu-uploader#installation.
+
+After installing make sure "nodemcu-uploader --help" command works before
+starting vim.
+
+=======
+
+*NMCUcp*
+
+This will upload the current opened file to NodeMCU. The NodeMCU is
+restarted after uploading.
+
+======
+
+*NMCUexec*
+
+This command executes the current opened file on NodeMCU. It uses
+the "nodemcu-uploader exec" command.
+
+======
+
+*NMCUls*
+
+This will list the files inside flash. If you want to delete a file, use the
+|NMCUrm| command.
+
+======
+
+*NMCUrestart*
+
+This restarts the NodeMCU, is like "nodemcu-uploader restart"
+
+======
+
+*NMCUrm* 
+
+This will prompt for files to delete. Once anwered the file is removed from the
+flash.
+
+======
+*NMCUsh*
+
+Use this to access the NodeMCU from terminal. It uses "nodemcu terminal"
+command.
+
+======
+
+*NMCUtest*
+
+This command does tree things in sequence. It uploads the current file
+to NodeMCU, restart it and enter in the serial. This should help to achieve
+some kind of quickfix. Testing code on NMCU is boring so this would
+speed up things a little.
